@@ -1,13 +1,13 @@
-"""Solve a water jug puzzle with breadth-first search and print the solution.
+"""Solve the assignment's water jug puzzle with breadth-first search and print the solution.
+
+Jugs of 12, 8 and 3 gallons, starting empty; goal: exactly 1 gallon in some jug.
 
 Usage (from the project root):
-    python -m q2_water_jugs.main                              # the assignment: jugs 12, 8, 3 - measure 1
-    python -m q2_water_jugs.main --capacities 5 3 --goal 4    # any other puzzle
+    python -m q2_water_jugs.main
 """
 
 from __future__ import annotations
 
-import argparse
 import sys
 from pathlib import Path
 
@@ -18,18 +18,8 @@ from q2_water_jugs.problem import WaterJugProblem
 from q2_water_jugs.search import FAILURE, breadth_first_search, reachable_states
 
 
-def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(description="Solve a water jug puzzle with breadth-first search.")
-    parser.add_argument("--capacities", type=int, nargs="+", default=[12, 8, 3],
-                        help="jug sizes in gallons (default: 12 8 3)")
-    parser.add_argument("--goal", type=int, default=1, help="gallons to measure (default: 1)")
-    args = parser.parse_args(argv)
-
-    if any(c <= 0 for c in args.capacities) or args.goal < 0:
-        print("Error: capacities must be positive and the goal cannot be negative.", file=sys.stderr)
-        return 1
-
-    problem = WaterJugProblem(args.capacities, args.goal)
+def main() -> int:
+    problem = WaterJugProblem(capacities=(12, 8, 3), goal=1)
     print(f"Jugs: {', '.join(str(c) for c in problem.capacities)} gallons | "
           f"goal: exactly {problem.goal} gallon(s) in any jug")
     print(f"Initial state: {problem.initial} | reachable states: {len(reachable_states(problem))}\n")

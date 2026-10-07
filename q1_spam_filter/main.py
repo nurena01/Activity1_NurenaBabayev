@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from q1_spam_filter.environment import MailboxEnvironment
-from q1_spam_filter.spam_agent import DATA_DIR, MOVE_TO_SPAM, SpamFilterAgent
+from q1_spam_filter.spam_agent import MOVE_TO_SPAM, SpamFilterAgent
 
 
 def main(argv=None) -> int:
@@ -27,16 +27,13 @@ def main(argv=None) -> int:
                                          "(default: the inbox's parent folder)")
     parser.add_argument("--copy", action="store_true",
                         help="copy emails instead of moving them (keeps the inbox intact)")
-    parser.add_argument("--allow", default=DATA_DIR / "allow_list.txt", help="allow list file")
-    parser.add_argument("--restrict", default=DATA_DIR / "restrict_list.txt", help="restrict list file")
-    parser.add_argument("--bad-words", default=DATA_DIR / "bad_words.txt", help="bad word list file")
     args = parser.parse_args(argv)
 
     if not Path(args.inbox).is_dir():
         print(f"Error: inbox folder not found: {args.inbox}", file=sys.stderr)
         return 1
 
-    agent = SpamFilterAgent.from_files(args.allow, args.restrict, args.bad_words)
+    agent = SpamFilterAgent.from_files()  # lists from q1_spam_filter/data/
     environment = MailboxEnvironment(args.inbox, args.output, keep_originals=args.copy)
     results = environment.run(agent)
 

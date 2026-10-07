@@ -1,7 +1,14 @@
 # DPS970 – Activity 1
 
-**Student:** Nurena Babayev
-**Language:** Python 3.10+ (standard library only, so nothing needs to be installed)
+| | |
+|---|---|
+| **Student** | Nurena Babayev |
+| **Student ID** | 159544238 |
+| **Email** | nbabayev1@myseneca.ca |
+| **Professor** | Davoud Gholamiangonabadi |
+| **Course** | DPS970 – Activity 1 |
+| **GitHub repository** | https://github.com/nurena01/Activity1_NurenaBabayev |
+| **Language** | Python 3.10+ (standard library only, so nothing needs to be installed) |
 
 | Question | Folder |
 |---|---|
@@ -36,7 +43,7 @@ python -m q1_spam_filter.main q1_spam_filter/test_data/inbox --output output --c
 - `inbox`: the folder of `.eml` files to classify.
 - `--output`: the folder where `spam/` and `email/` are created. The default is the inbox's parent folder.
 - `--copy`: copy the emails instead of moving them, so the demo inbox stays intact. Leave it out to **move** the emails, as the assignment describes.
-- `--allow`, `--restrict`, `--bad-words`: use different list files. The defaults are in [`q1_spam_filter/data/`](q1_spam_filter/data/).
+- The allow list, restrict list and bad-word list are read from [`q1_spam_filter/data/`](q1_spam_filter/data/).
 
 Each email is printed with the agent's decision and the reason, for example:
 
@@ -74,7 +81,6 @@ Each email is printed with the agent's decision and the reason, for example:
 | Episodic / sequential | **Episodic** | Each email is one independent episode. Classifying one email does not affect how the next one is classified. |
 | Static / dynamic | **Static** | The email and the lists do not change while the agent is deciding. |
 | Discrete / continuous | **Discrete** | There is a finite number of emails, a countable number of words, and only two possible actions. |
-| Known / unknown | **Known** | The rules for what makes an email spam are given in full by the lists and the bad-word threshold. |
 
 ## c) Most appropriate agent type: simple reflex agent
 
@@ -114,6 +120,8 @@ function SIMPLE-REFLEX-AGENT(percept) returns an action
 2. Sender's domain is on the **restrict list** → `MoveToSpam` (regardless of contents)
 3. **More than 5** bad words in the body → `MoveToSpam`
 4. Otherwise → `MoveToEmail`
+
+**Why this agent acts rationally.** In Chapter 2, a rational agent chooses the action that maximizes the expected value of its performance measure, given the percept sequence to date. Here the performance measure is classifying every email correctly according to the allow list, restrict list and bad-word rule. For each percept (email), the rules above select exactly the action that the performance measure rewards, so no other action could score better. The agent is not omniscient: it cannot read encrypted or binary parts, so it decides using the information it *can* perceive, which is what rationality requires.
 
 The **environment** ([`environment.py`](q1_spam_filter/environment.py)) gives each email to the agent as a percept and then carries out the action by placing the file in `spam/` or `email/`.
 
@@ -187,7 +195,6 @@ Step 3: (1, 8, 3)  <- Pour 12->3
 Solved in 3 steps (path cost 3).
 ```
 
-Any other puzzle can be solved too, for example `python -m q2_water_jugs.main --capacities 5 3 --goal 4`.
 (`python q2_water_jugs/main.py` works as well.)
 
 ## Files
@@ -248,7 +255,7 @@ This heuristic is **admissible**: it never overestimates, because a state that i
 
 **No, not every search algorithm is guaranteed to reach a goal. But complete algorithms such as breadth-first search are guaranteed to, for this problem.**
 
-1. **A goal is reachable.** All amounts the jugs can hold are combinations of 12, 8 and 3. Since gcd(12, 8, 3) = 1, measuring 1 gallon is possible. The shortest solution is Fill 12 → Pour 12→8 → Pour 12→3, which gives `(1, 8, 3)`.
+1. **A goal is reachable.** A solution exists: Fill 12 → Pour 12→8 → Pour 12→3 gives `(1, 8, 3)`. Our BFS finds it, so at least one goal state can be reached from the initial state.
 2. **The state space is finite.** There are at most 468 states (314 reachable), and every state has at most 12 actions.
 3. **Complete algorithms will find the goal.** BFS, uniform-cost search, iterative deepening and graph-search DFS (DFS with a reached set) are guaranteed to find a solution when one exists in a finite state space with a finite branching factor. Graph-search versions never expand the same state twice, so they terminate after at most 314 states.
 4. **BFS is also optimal here.** All actions cost 1, and BFS finds the shallowest goal, so its 3-step solution is the shortest possible.
@@ -298,7 +305,7 @@ function BREADTH-FIRST-SEARCH(problem) returns a solution node or failure
 | 12, 8, 3 → 5 | 2 steps |
 | 12, 8, 3 → 7 | 4 steps |
 | 12, 8, 3 → 0 (initial state is already a goal) | 0 steps |
-| 5, 3 → 4 (classic "Die Hard" puzzle) | 6 steps |
+| 5, 3 → 4 | 6 steps |
 | 4, 3 → 2 | 4 steps |
 | 8, 5, 3 → 4 | 6 steps |
 | 4, 6 → 1 (impossible: every amount is even) | failure |
