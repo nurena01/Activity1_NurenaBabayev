@@ -1,0 +1,63 @@
+[
+  {
+    "name": "assignment: jugs 12, 8, 3 - measure 1 gallon",
+    "capacities": [12, 8, 3],
+    "goal": 1,
+    "solvable": true,
+    "shortest_steps": 3
+  },
+  {
+    "name": "jugs 12, 8, 3 - measure 5 gallons",
+    "capacities": [12, 8, 3],
+    "goal": 5,
+    "solvable": true,
+    "shortest_steps": 2
+  },
+  {
+    "name": "jugs 12, 8, 3 - measure 7 gallons",
+    "capacities": [12, 8, 3],
+    "goal": 7,
+    "solvable": true,
+    "shortest_steps": 4
+  },
+  {
+    "name": "jugs 12, 8, 3 - goal 0 (initial state is already a goal)",
+    "capacities": [12, 8, 3],
+    "goal": 0,
+    "solvable": true,
+    "shortest_steps": 0
+  },
+  {
+    "name": "classic Die Hard puzzle: jugs 5, 3 - measure 4 gallons",
+    "capacities": [5, 3],
+    "goal": 4,
+    "solvable": true,
+    "shortest_steps": 6
+  },
+  {
+    "name": "jugs 4, 3 - measure 2 gallons",
+    "capacities": [4, 3],
+    "goal": 2,
+    "solvable": true,
+    "shortest_steps": 4
+  },
+  {
+    "name": "jugs 8, 5, 3 - measure 4 gallons",
+    "capacities": [8, 5, 3],
+    "goal": 4,
+    "solvable": true,
+    "shortest_steps": 6
+  },
+  {
+    "name": "unsolvable: jugs 4, 6 - measure 1 gallon (every amount is a multiple of gcd 2)",
+    "capacities": [4, 6],
+    "goal": 1,
+    "solvable": false
+  },
+  {
+    "name": "unsolvable: jugs 12, 8, 3 - goal of 13 is larger than every jug",
+    "capacities": [12, 8, 3],
+    "goal": 13,
+    "solvable": false
+  }
+]
