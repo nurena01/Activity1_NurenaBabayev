@@ -1,0 +1,12 @@
+From: offers@unknown-shop.com
+To: student@example.com
+Subject: Special deal
+Date: Mon, 05 Oct 2026 20:00:00 -0400
+Message-ID: <12@unknown-shop.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p><b>Free</b> <i>cash</i> for every <a href="https://example.com/deal">winner</a>!</p>
+<p>Claim your prize and bonus.</p>
+</body></html>

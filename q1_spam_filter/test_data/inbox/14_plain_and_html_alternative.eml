@@ -1,0 +1,23 @@
+From: newsletter@unknown-shop.com
+To: student@example.com
+Subject: Monthly newsletter
+Date: Mon, 05 Oct 2026 22:00:00 -0400
+Message-ID: <14@unknown-shop.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY14"
+
+--BOUNDARY14
+Content-Type: text/plain; charset="utf-8"
+
+This month: a free workshop, a member discount, and a bonus article.
+Click here to read more.
+
+--BOUNDARY14
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>This month: a free workshop, a member discount, and a bonus article.</p>
+<p><a href="https://example.com">Click here</a> to read more.</p>
+</body></html>
+
+--BOUNDARY14--

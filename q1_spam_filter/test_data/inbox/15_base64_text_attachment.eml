@@ -1,0 +1,31 @@
+From: <John@bmw.eml.light.com>
+To: <Andy@fileformat.com>
+Date: Thu, 8 Mar 2018 10:43:37 +0100
+Subject: bmw eml light
+Message-ID: <15@bmw.eml.light.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY15"
+
+--BOUNDARY15
+Content-Type: text/plain; charset="utf-8"
+
+Hi Andy, the files you asked for are attached.
+
+--BOUNDARY15
+Content-Type: text/plain; charset="windows-1252"; name="apple app store.txt"
+Content-Disposition: attachment; filename="apple app store.txt"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_jkhztmd02
+
+RnJlZSBjYXNoIHByaXplISBZb3UgYXJlIGEgd2lubmVyLiBDbGFpbSB5b3VyIGJvbnVzIG5vdy4NCg==
+
+--BOUNDARY15
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; name="english_spodr.xlsx"
+Content-Disposition: attachment; filename="english_spodr.xlsx"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_jkhztmd43
+
+UEsDBCBmcmVlIGNhc2ggcHJpemUgd2lubmVyIGNsYWltIGJvbnVzIG9mZmVyIG1vbmV5IChiaW5h
+cnkgc3ByZWFkc2hlZXQgZGF0YSk=
+
+--BOUNDARY15--

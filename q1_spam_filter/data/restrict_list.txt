@@ -1,0 +1,6 @@
+# Restrict list: unsafe domains. Email from these domains (or their subdomains)
+# is always classified as SPAM, regardless of its contents.
+# One domain per line. Lines starting with # are ignored.
+scam-offers.net
+cheap-pills.biz
+lottery-winners.info

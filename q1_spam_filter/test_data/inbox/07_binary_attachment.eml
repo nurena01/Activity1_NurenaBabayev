@@ -1,0 +1,21 @@
+From: friend@unknown-domain.org
+To: student@example.com
+Subject: Data file
+Date: Mon, 05 Oct 2026 15:00:00 -0400
+Message-ID: <07@unknown-domain.org>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY07"
+
+--BOUNDARY07
+Content-Type: text/plain; charset="utf-8"
+
+Hi, please see the attached data file from the meeting.
+
+--BOUNDARY07
+Content-Type: application/octet-stream; name="data.bin"
+Content-Disposition: attachment; filename="data.bin"
+Content-Transfer-Encoding: base64
+
+ZnJlZSBjYXNoIHByaXplIHdpbm5lciBjbGFpbSBib251cyBvZmZlciBtb25leQo=
+
+--BOUNDARY07--

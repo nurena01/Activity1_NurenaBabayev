@@ -1,0 +1,24 @@
+From: secure@unknown-domain.org
+To: student@example.com
+Subject: Encrypted message
+Date: Mon, 05 Oct 2026 21:00:00 -0400
+Message-ID: <13@unknown-domain.org>
+MIME-Version: 1.0
+Content-Type: multipart/encrypted; protocol="application/pgp-encrypted"; boundary="BOUNDARY13"
+
+--BOUNDARY13
+Content-Type: application/pgp-encrypted
+
+Version: 1
+
+--BOUNDARY13
+Content-Type: application/octet-stream; name="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA8x2Tq7a9pZcAQf/free/cash/prize/winner/claim/bonus/offerXk3Q
+Zm9vYmFyYmF6cXV4Lm5vdC5yZWFkYWJsZS5ieS50aGUuYWdlbnQ=
+=Ab3d
+-----END PGP MESSAGE-----
+
+--BOUNDARY13--

@@ -1,0 +1,7 @@
+# Allow list: safe domains. Email from these domains (or their subdomains)
+# is always classified as NOT spam, regardless of its contents.
+# One domain per line. Lines starting with # are ignored.
+seneca.ca
+senecapolytechnic.ca
+trusted-bank.com
+myfamily.org

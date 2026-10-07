@@ -1,0 +1,19 @@
+# Bad words: words that are likely to appear in spam.
+# If MORE THAN 5 occurrences are found in the body of an email that is not
+# from an allow-listed domain, the email is classified as spam.
+# One word per line, matched case-insensitively as whole words.
+# Lines starting with # are ignored.
+free
+winner
+cash
+prize
+urgent
+lottery
+click
+guaranteed
+offer
+cheap
+bonus
+money
+claim
+discount

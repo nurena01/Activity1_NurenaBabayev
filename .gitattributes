@@ -1,0 +1,2 @@
+# keep sample emails byte-for-byte identical on every OS
+*.eml -text

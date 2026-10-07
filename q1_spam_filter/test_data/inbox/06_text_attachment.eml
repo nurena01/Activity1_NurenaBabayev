@@ -1,0 +1,20 @@
+From: friend@unknown-domain.org
+To: student@example.com
+Subject: Meeting notes
+Date: Mon, 05 Oct 2026 14:00:00 -0400
+Message-ID: <06@unknown-domain.org>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY06"
+
+--BOUNDARY06
+Content-Type: text/plain; charset="utf-8"
+
+Hi, please see the attached notes from the meeting.
+
+--BOUNDARY06
+Content-Type: text/plain; charset="utf-8"; name="notes.txt"
+Content-Disposition: attachment; filename="notes.txt"
+
+Free cash! Claim your prize. You are a winner. Bonus offer inside.
+
+--BOUNDARY06--

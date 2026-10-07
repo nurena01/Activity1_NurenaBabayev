@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+# output folders created when running the spam filter demo
+output/
+q1_spam_filter/test_data/spam/
+q1_spam_filter/test_data/email/
+*.zip
+# personal working checklist (not part of the submission)
+TODO.md
